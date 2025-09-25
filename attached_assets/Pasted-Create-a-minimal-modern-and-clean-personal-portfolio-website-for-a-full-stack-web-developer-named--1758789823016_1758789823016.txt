@@ -1,0 +1,38 @@
+Create a minimal, modern, and clean personal portfolio website for a full-stack web developer named **Hemnath**.  
+The site should follow a simple but professional layout with smooth transitions, responsive design, and system-based light/dark theme support.
+
+📌 Hero Section:
+- Name: Hemnath
+- Role: Full Stack Web Developer
+- Short tagline: "I love building solutions that are visually beautiful and performance-driven."
+- Add a subtle call-to-action button to view projects and another to contact.
+
+📖 About Section:
+- Describe Hemnath as a passionate full-stack developer who enjoys building solutions that balance design aesthetics with strong backend performance.
+- Mention his focus on Next.js, MERN stack, and creating minimal, user-friendly web apps.
+- Highlight that he’s continuously learning and exploring modern web technologies.
+
+🛠️ Skills Section:
+- Showcase skills as badges or a clean list: MERN Stack, Next.js, Canva, Figma, Render, and basic Python.
+
+🚀 Projects Section (4 featured projects):
+1. **ThinkNotes** – A beginner-friendly full-stack note-taking web app built using the MERN stack. Users can create, edit, and delete notes in a clean UI — no login required. Built to understand how frontend, backend, and deployment come together. [GitHub](https://github.com/Hemnath4114/MERN-ThinkNotes)
+2. **ReactBlog** – A simple but powerful blogging platform built with React.js. Users can create, edit, and delete blog posts. Developed to explore hooks, routing, and API integration. [GitHub](https://github.com/Hemnath4114/React-Blog)
+3. **MoodTunes** – A front-end-only music UI project built with HTML, CSS, and JS. It categorizes music based on moods (Chill, Energetic, Romantic, etc.) and visually reflects emotional tones. [GitHub](https://github.com/Hemnath4114/Mood-Tunes)
+4. **Next.js Dashboard** – A modern full-stack dashboard app built with Next.js 13+, React, and Tailwind CSS. Demonstrates App Router, server/client components, authentication, API routes, and responsive design. [GitHub](https://github.com/Hemnath4114/Next-Dashboard)
+
+📬 Contact Section:
+- Add a contact form (Name, Email, Message)
+- Include these links with icons:
+  - Email: hemnath04112004@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/hemnath-marimuthu-in/
+  - GitHub: https://github.com/Hemnath4114
+
+🖌️ Design Guidelines:
+- Use a minimal and modern layout with clean typography and plenty of white space.
+- Include subtle animations and smooth hover effects.
+- Navigation bar with smooth scrolling to sections.
+- Auto theme switching (light/dark) based on system preferences.
+- Make the site responsive and mobile-friendly.
+
+Overall Tone: Professional, friendly, and developer-focused — ideal for showcasing Hemnath’s portfolio to recruiters and collaborators.
