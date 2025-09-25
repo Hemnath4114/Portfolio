@@ -85,7 +85,6 @@ export function ContactSection() {
   });
 
   const onSubmit = (data: InsertContactSubmission) => {
-    console.log('Contact form submitted:', { name: data.name, email: data.email, messageLength: data.message.length });
     contactMutation.mutate(data);
   };
 

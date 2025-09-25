@@ -41,9 +41,29 @@ export function Navigation() {
       }
     };
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Element;
+      if (isMenuOpen && !target.closest("#mobile-menu") && !target.closest("[data-testid='button-menu-toggle']")) {
+        setIsMenuOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const cycleTheme = () => {
     if (theme === "light") setTheme("dark");
@@ -123,6 +143,9 @@ export function Navigation() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               data-testid="button-menu-toggle"
               className="hover-elevate"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label="Toggle navigation menu"
             >
               {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
@@ -136,8 +159,9 @@ export function Navigation() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border md:hidden"
+              className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border md:hidden max-h-[70vh] overflow-y-auto"
               data-testid="mobile-menu"
+              id="mobile-menu"
             >
               <div className="flex flex-col py-4">
                 {navItems.map((item, index) => (
