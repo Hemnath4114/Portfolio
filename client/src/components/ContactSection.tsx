@@ -85,6 +85,7 @@ export function ContactSection() {
   });
 
   const onSubmit = (data: InsertContactSubmission) => {
+    console.log('Contact form submitted:', { name: data.name, email: data.email, messageLength: data.message.length });
     contactMutation.mutate(data);
   };
 
@@ -169,9 +170,13 @@ export function ContactSection() {
                         data-testid="input-name"
                       />
                       {form.formState.errors.name && (
-                        <p className="text-sm text-destructive">
+                        <motion.p 
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-sm text-destructive"
+                        >
                           {form.formState.errors.name.message}
-                        </p>
+                        </motion.p>
                       )}
                     </div>
                     
@@ -185,9 +190,13 @@ export function ContactSection() {
                         data-testid="input-email"
                       />
                       {form.formState.errors.email && (
-                        <p className="text-sm text-destructive">
+                        <motion.p 
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-sm text-destructive"
+                        >
                           {form.formState.errors.email.message}
-                        </p>
+                        </motion.p>
                       )}
                     </div>
                     
@@ -201,9 +210,13 @@ export function ContactSection() {
                         data-testid="input-message"
                       />
                       {form.formState.errors.message && (
-                        <p className="text-sm text-destructive">
+                        <motion.p 
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-sm text-destructive"
+                        >
                           {form.formState.errors.message.message}
-                        </p>
+                        </motion.p>
                       )}
                     </div>
                     

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Monitor } from "lucide-react";
+import { Moon, Sun, Monitor, Menu, X } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { id: "about", label: "About" },
@@ -13,6 +13,7 @@ const navItems = [
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("hero");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   const scrollToSection = (sectionId: string) => {
@@ -20,6 +21,7 @@ export function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -92,21 +94,71 @@ export function Navigation() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={cycleTheme}
-            data-testid="button-theme-toggle"
-            className="hover-elevate"
+        <div className="flex items-center gap-2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
           >
-            {getThemeIcon()}
-          </Button>
-        </motion.div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={cycleTheme}
+              data-testid="button-theme-toggle"
+              className="hover-elevate"
+            >
+              {getThemeIcon()}
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="md:hidden"
+          >
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              data-testid="button-menu-toggle"
+              className="hover-elevate"
+            >
+              {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </Button>
+          </motion.div>
+        </div>
+
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border md:hidden"
+              data-testid="mobile-menu"
+            >
+              <div className="flex flex-col py-4">
+                {navItems.map((item, index) => (
+                  <motion.button
+                    key={item.id}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`px-6 py-3 text-left text-sm font-medium transition-colors hover:text-primary hover:bg-muted/50 ${
+                      activeSection === item.id ? "text-primary bg-muted/30" : "text-muted-foreground"
+                    }`}
+                    data-testid={`mobile-link-${item.id}`}
+                  >
+                    {item.label}
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </motion.header>
   );
