@@ -4,12 +4,22 @@ import { useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
-  "MERN Stack",
   "Next.js",
+  "React",
+  "MongoDB",
+  "Express",
+  "Node.js",
+  "TypeScript",
+  "JavaScript",
+  "Tailwind CSS",
+  "HTML5",
+  "CSS3",
+  "Git & GitHub",
+  "RESTful APIs",
+  "Render",
+  "Vercel",
   "Canva",
   "Figma",
-  "Render",
-  "Basic Python",
 ];
 
 export function SkillsSection() {

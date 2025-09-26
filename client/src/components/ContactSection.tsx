@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { Mail, Github, Linkedin, Send, Loader2 } from "lucide-react";
+import { Mail, Github, Linkedin, Send, Loader2, Instagram } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
@@ -25,14 +25,20 @@ const socialLinks = [
     icon: Linkedin,
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/hemnath-marimuthu-in/",
-    text: "LinkedIn Profile",
+    text: "LinkedIn",
   },
   {
     icon: Github,
     label: "GitHub",
     href: "https://github.com/Hemnath4114",
-    text: "GitHub Profile",
+    text: "GitHub",
   },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/hemnath._._/",
+    text: "Instagram",
+  }
 ];
 
 export function ContactSection() {

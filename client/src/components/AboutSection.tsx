@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+
 export function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -81,7 +82,7 @@ export function AboutSection() {
             >
               <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
                 <div className="text-6xl font-bold text-primary/40">
-                  &lt;/&gt;
+                  &lt; &#47;&gt;
                 </div>
               </div>
             </motion.div>

@@ -8,7 +8,7 @@ interface ProjectCardProps {
   description: string;
   techStack: string[];
   githubUrl: string;
-  liveUrl?: string;
+  liveUrl: string;
   index: number;
 }
 

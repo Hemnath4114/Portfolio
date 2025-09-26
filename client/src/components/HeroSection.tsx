@@ -25,7 +25,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             data-testid="text-name"
           >
-            Hemnath
+            HEMNATH
           </motion.h1>
           
           <motion.h2 
