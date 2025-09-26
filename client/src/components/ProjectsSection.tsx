@@ -9,7 +9,7 @@ const projects = [
     description: "A beginner-friendly full-stack note-taking web app built using the MERN stack. Users can create, edit, and delete notes in a clean UI — no login required. Built to understand how frontend, backend, and deployment come together.",
     techStack: ["MongoDB", "Express", "React", "Node.js","Upstash Redis","Tailwind CSS","Render","React Router","Axios"],
     githubUrl: "https://github.com/Hemnath4114/MERN-ThinkNotes",
-    liveUrl: "https://mern-thinknotes.onrender.com/",
+    liveUrl: "https://thinknotes-onju.onrender.com/",
   },
   {
     title: "ReactBlog",
