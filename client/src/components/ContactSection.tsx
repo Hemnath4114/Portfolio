@@ -6,7 +6,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { Mail, Github, Linkedin, Send, Loader2, Instagram } from "lucide-react";
+import { Mail, Github, Linkedin, Send, Loader2, Instagram ,} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+// Replace Whatsapp with FaWhatsapp in your socialLinks array
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
@@ -38,6 +40,12 @@ const socialLinks = [
     label: "Instagram",
     href: "https://www.instagram.com/hemnath._._/",
     text: "Instagram",
+  },
+  {
+    icon: FaWhatsapp,
+    label: "WhatsApp",
+    href: "https://wa.me/+918680964114",
+    text: "WhatsApp",
   }
 ];
 

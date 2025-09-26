@@ -16,7 +16,7 @@ const projects = [
     description: "A simple but powerful blogging platform built with React.js. Users can create, edit, and delete blog posts. Developed to explore hooks, routing, and API integration.",
     techStack: ["React", "JavaScript", "CSS", "API Integration","React Router","Axios"],
     githubUrl: "https://github.com/Hemnath4114/React-Blog",
-    liveUrl: "https://react-blog-hemnath4114.vercel.app/",
+    liveUrl: "https://react-blog-2-d0tr.onrender.com/",
   },
   {
     title: "MoodTunes",
@@ -30,7 +30,7 @@ const projects = [
     description: "A modern full-stack dashboard app built with Next.js 13+, React, and Tailwind CSS. Demonstrates App Router, server/client components, authentication, API routes, and responsive design.",
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript","Vercel"],
     githubUrl: "https://github.com/Hemnath4114/Next-Dashboard",
-    liveUrl: "https://next-dashboard-hemnath4114.vercel.app/",
+    liveUrl: "https://next-dashboard-p66b.onrender.com",
   },
 ];
 
