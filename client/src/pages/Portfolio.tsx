@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { CodePlayground } from "@/components/CodePlayground";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
@@ -27,6 +29,8 @@ export default function Portfolio() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <TestimonialsSection />
+          <CodePlayground />
           <ContactSection />
         </main>
         <Footer />

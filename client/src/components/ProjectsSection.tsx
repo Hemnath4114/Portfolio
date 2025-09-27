@@ -10,6 +10,9 @@ const projects = [
     techStack: ["MongoDB", "Express", "React", "Node.js","Upstash Redis","Tailwind CSS","Render","React Router","Axios"],
     githubUrl: "https://github.com/Hemnath4114/MERN-ThinkNotes",
     liveUrl: "https://thinknotes-onju.onrender.com/",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&crop=center",
+    features: ["CRUD Operations", "Real-time Updates", "Responsive Design", "No Authentication Required"],
+    status: "Live"
   },
   {
     title: "ReactBlog",
@@ -17,6 +20,9 @@ const projects = [
     techStack: ["React", "JavaScript", "CSS", "API Integration","React Router","Axios"],
     githubUrl: "https://github.com/Hemnath4114/React-Blog",
     liveUrl: "https://react-blog-2-d0tr.onrender.com/",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop&crop=center",
+    features: ["Blog Management", "Rich Text Editor", "Search Functionality", "Responsive Layout"],
+    status: "Live"
   },
   {
     title: "MoodTunes",
@@ -24,6 +30,9 @@ const projects = [
     techStack: ["HTML", "CSS", "JavaScript", "UI/UX"],
     githubUrl: "https://github.com/Hemnath4114/Mood-Tunes",
     liveUrl: "https://hemnath4114.github.io/Mood-Tunes/",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center",
+    features: ["Mood-based Categorization", "Interactive UI", "Smooth Animations", "Mobile Responsive"],
+    status: "Live"
   },
   {
     title: "Next.js Dashboard",
@@ -31,6 +40,9 @@ const projects = [
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript","Vercel"],
     githubUrl: "https://github.com/Hemnath4114/Next-Dashboard",
     liveUrl: "https://next-dashboard-p66b.onrender.com",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
+    features: ["App Router", "Server Components", "Authentication", "API Routes"],
+    status: "Live"
   },
 ];
 
@@ -86,6 +98,9 @@ export function ProjectsSection() {
                 techStack={project.techStack}
                 githubUrl={project.githubUrl}
                 liveUrl={project.liveUrl}
+                image={project.image}
+                features={project.features}
+                status={project.status}
                 index={index}
               />
             ))}

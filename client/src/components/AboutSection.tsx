@@ -60,7 +60,7 @@ export function AboutSection() {
                 variants={itemVariants}
                 className="text-lg leading-relaxed text-muted-foreground"
               >
-                With expertise in Next.js and the MERN stack, I bridge the gap between 
+                With expertise in <span className="text-primary font-semibold">Next.js</span> and the <span className="text-primary font-semibold">MERN stack</span>, I bridge the gap between 
                 beautiful user interfaces and robust server-side architecture. I'm 
                 continuously learning and exploring modern web technologies to stay at 
                 the forefront of development.
@@ -72,8 +72,22 @@ export function AboutSection() {
               >
                 When I'm not coding, you'll find me exploring new frameworks, contributing 
                 to open source, or working on side projects that challenge my skills and 
-                creativity.
+                creativity. I believe in the power of clean code and user-centered design.
               </motion.p>
+
+              <motion.div 
+                variants={itemVariants}
+                className="grid grid-cols-2 gap-4 pt-4"
+              >
+                <div className="text-center p-4 bg-muted/50 rounded-lg">
+                  <div className="text-2xl font-bold text-primary">4+</div>
+                  <div className="text-sm text-muted-foreground">Projects Built</div>
+                </div>
+                <div className="text-center p-4 bg-muted/50 rounded-lg">
+                  <div className="text-2xl font-bold text-accent">2+</div>
+                  <div className="text-sm text-muted-foreground">Years Learning</div>
+                </div>
+              </motion.div>
             </motion.div>
             
             <motion.div 
